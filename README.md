@@ -1,5 +1,6 @@
 # Prerequisites
-- npm should already be installed
+- npm should already be installed and properly setup
+- yarn should be installed and properly setup
 
 # How to install and run
 - clone the project
@@ -10,13 +11,13 @@ git clone https://github.com/yoseftanaka/book-pick-up-service.git
 ```
 npm install pm2@latest -g
 ```
-- enter to the project folder and run npm install
+- enter to the project folder and let yarn install dependencies
 ```
-npm install
+yarn
 ```
 - build the project
 ```
-npm run build
+yarn run build
 ```
 - run project using pm2 (application name can be anything)
 ```
