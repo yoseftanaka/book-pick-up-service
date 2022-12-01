@@ -1,3 +1,29 @@
+# Prerequisites
+- npm should already be installed
+
+# How to install and run
+- clone the project
+```
+git clone https://github.com/yoseftanaka/book-pick-up-service.git
+```
+- install pm2
+```
+npm install pm2@latest -g
+```
+- enter to the project folder and run npm install
+```
+npm install
+```
+- build the project
+```
+npm run build
+```
+- run project using pm2 (application name can be anything)
+```
+pm2 start dist/main.js --name <application_name>
+```
+- server should run on localhost:3000
+
 ## Assumptions
 - edition_count = the edition of a title
 - genre will be omitted because I cannot find any genre in the open library response
