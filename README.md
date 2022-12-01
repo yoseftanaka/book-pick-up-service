@@ -10,3 +10,73 @@
     - authors
     - editionNumber
     - subjects
+- databases will be represented by arrays
+
+## API Contracts
+### Get book for customer
+- endpoint: `/books/users`
+- query parameters:
+    - subject: string
+- http method: GET
+- example response:
+```
+[
+    {
+        "coverId": 12818862,
+        "title": "Wuthering Heights",
+        "authors": [
+            "Emily Brontë"
+        ],
+        "editionNumber": 1542,
+        "subjects": [
+            "Children's fiction",
+            "Classic fiction"
+        ]
+    }
+]
+```
+
+### Get book for librarians
+- endpoint: `/books/librarians`
+- query parameters:
+    - subject: string
+- http method: GET
+- example response:
+```
+[
+    {
+        "coverId": 12818862,
+        "title": "Wuthering Heights",
+        "authors": [
+            "Emily Brontë"
+        ],
+        "editionNumber": 1542,
+        "subjects": [
+            "Children's fiction",
+            "Classic fiction"
+        ],
+        "borrowed": [
+            {
+                "coverId": 12818862,
+                "userName": "User1",
+                "pickupDate": "2022-11-30T00:00:00.000Z"
+            }
+        ]
+    }
+]
+```
+
+### Submit pickup date
+- endpoint: `/books`
+- http method: POST
+- example request body:
+```
+{
+    "userId": "2",
+    "coverId": 8257991,
+    "pickUpDate": "2022-11-30T00:00:00.000Z"
+}
+```
+- example response:
+```
+```
