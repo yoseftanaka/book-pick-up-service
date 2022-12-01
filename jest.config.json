@@ -6,8 +6,5 @@
   ],
   "transform": {
     "^.+\\.(ts|tsx)$": "ts-jest"
-  },
-  "transformIgnorePatterns": [
-    "/node_modules/(?!d3-(array|format))"
-  ]
+  }
 }

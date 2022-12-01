@@ -43,6 +43,9 @@ export class GetBookService {
   private constructGetBookResponseForUser(
     books: OpenLibraryGetBookResponse,
   ): GetBookResponseForUser[] {
+    if (!books) {
+      return [];
+    }
     const result: GetBookResponseForUser[] = [];
     for (const book of books.works) {
       const convert = {
@@ -65,6 +68,9 @@ export class GetBookService {
   private constructGetBookResponseForLibrarian(
     books: OpenLibraryGetBookResponse,
   ): GetBookResponseForLibrarian[] {
+    if (!books) {
+      return [];
+    }
     const result: GetBookResponseForLibrarian[] = [];
     for (const book of books.works) {
       const convert: GetBookResponseForLibrarian = {
